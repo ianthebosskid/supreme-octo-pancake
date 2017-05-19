@@ -486,6 +486,18 @@ var currentItem = randomLootDrop(orc1);
 currentItem = compare(orc1,currentItem);
 }
 
+level(4,"After defeating the orc, you move on. Then, you see a hungry giant spider! It blocks your way and moves forward to attack.",currentItem,hero);
+if (currentItem.type != "health") {
+currentItem = null;
+delete currentItem;
+}
+var giantSpider1 = new giantSpider();
+runBattle(hero,giantSpider1);
+if (hero.health >= 0) {
+var currentItem = randomLootDrop(giantSpider1);
+} else {
+alert("Your hero is dead. Restart?");
+}
 
 
 
