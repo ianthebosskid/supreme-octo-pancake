@@ -485,7 +485,6 @@ if (hero.health >= 0) {
 var currentItem = randomLootDrop(orc1);
 currentItem = compare(orc1,currentItem);
 }
-console.log();
 
 
 
